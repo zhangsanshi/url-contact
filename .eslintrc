@@ -1,0 +1,26 @@
+{
+	"extends": "airbnb-base",
+	"global-strict": [
+		"error",
+		"always"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"jasmine": true
+	},
+	"indent": [
+		"error",
+		4
+	],
+	"settings": {
+		"import/resolver": {
+			"webpack": {}
+		}
+	},
+	"rules": {
+		"no-param-reassign": [2, {
+			"props": false
+		}]
+	}
+}
