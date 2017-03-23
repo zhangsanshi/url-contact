@@ -12,8 +12,12 @@
   const ops = {
     encodeValuesOnly: true
   };
-  console.log(urlContact('/api/:a/:b', params, search, ops));
-  console.log(urlContact('/api/:a/:b?t=1', params, search, ops));
-  console.log(urlContact('/api/:a/:b?c=2#d', params, search, ops));
-  console.log(urlContact('/api/:a/:b#d', params, search, ops));
+  console.log(urlContact(':a/:b', params, search, ops));
+  console.log(urlContact('https://demo.com/api/:a/:b', params, search, ops));
+  console.log(urlContact('http://demo.com/api/:a/:b?t=1', params, search, ops));
+  console.log(urlContact('http://demo.com/api/:a/:b?c=2#d', params, search, ops));
+  console.log(urlContact('https://demo.com/api/:a/:b#d', params, search, ops));
+  console.log(urlContact('https://demo.com/api/:a/:b#d', params, search, ops));
+  console.log(urlContact('https://demo.com/api/:a/:b#d', params, search, ops));
+  console.log(urlContact('http://username:password@demo.com:8080/api/:a/:b#d', params, search, ops));
 </script>
