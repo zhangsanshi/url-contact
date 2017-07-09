@@ -1,11 +1,11 @@
 const stringify = require('qs/lib/stringify');
 
-module.exports = function urlContact(url, params = {}, search, searchOptions) {
+module.exports = function urlContact(url, params, search, searchOptions) {
+  const $params = params || {};
   let $url = String(url);
-
-  $url = $url.replace(/(\/|^):(.*?)(?=\/|\.|#|$)/g, (a, b, param) => {
+  $url = $url.replace(/(\/|^):(.*?)(?=\/|\.|#|\?|$)/g, (a, b, param) => {
     if (param) {
-      return b + encodeURIComponent(params[param] || '');
+      return b + encodeURIComponent($params[param] || '');
     }
     return b;
   });
