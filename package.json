@@ -1,7 +1,8 @@
 {
   "version": "0.0.2",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p --progress --colors"
+    "build": "cross-env NODE_ENV=production webpack -p --progress --colors",
+    "test": "mocha ./test/test.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -19,6 +20,7 @@
     "eslint-config-airbnb-base": "latest",
     "eslint-loader": "latest",
     "eslint-plugin-import": "latest",
+    "mocha": "^3.4.2",
     "webpack": "^1.14.0"
   },
   "author": "zhangsanshi5566@gmail.com",
